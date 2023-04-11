@@ -1,0 +1,78 @@
+div.box1 { /* 条件ボックス */
+/*width: 1200px;*/
+width: 98%;
+min-width: 950px;    /*950pxより小さくしない*/
+height: 70px;
+border-style: solid;
+border-radius: 5px;     /*角を丸める*/
+border-width: 1px;
+border-color: red;
+background-color: #ffd78c;
+position: absolute;
+top: 110px;
+left: 10px; 
+/* top: 10px;
+left: 10px; */
+}
+div.box2 { /* 表示ボックス */
+width: 100%;    /* windowの98%  950pxが最小*/
+min-width: 950px;
+height: auto;
+font-size: 30pt;
+}
+table.datagrid {
+  width: 100%;
+  table-layout:fixed; /* オーバーフロの処理 */
+}
+table.datagrid .thead {
+  display: none;
+}
+table.datagrid tr {
+  width: 100%;
+}
+table.datagrid td {
+  display: block;
+  text-align: center;
+  width: 100%;
+  /* 以下オーバーフロの処理 */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+table.datagrid td:first-child {
+  background: #674ef8;  
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+table.datagrid td:before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  margin-right: 10px;
+  background: #9d90e771;
+  width: 200pt;
+  text-align-last: justify;       /* Chrome・Firefox用 */
+  text-justify: inter-ideograph;  /* IE・Edge用 */
+  /* 以下オーバーフロの処理 */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*  2列目を隠す  */
+table.datagrid td:nth-child(2) {
+  display:none;
+}
+/*
+table.datagrid tr:nth-child(even) {
+  background: #d9d9d9;
+}
+*/
+/*マウスを置いたときの強調表示*/
+table.datagrid tr:hover{
+  /* background-color:grey; */
+  /*font-weight: bold; */
+  color: #0000ff;
+  background-color: #FFFF80;
+  cursor: pointer;
+}

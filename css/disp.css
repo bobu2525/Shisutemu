@@ -1,0 +1,54 @@
+div.box1 { /* 条件ボックス */
+/*width: 1200px;*/
+width: 98%;
+min-width: 950px;    /*950pxより小さくしない*/
+height: 70px;
+border-style: solid;
+border-radius: 5px;     /*角を丸める*/
+border-width: 1px;
+border-color: red;
+background-color: #ffd78c;
+position: absolute;
+top: 110px;
+left: 10px; 
+/* top: 10px;
+left: 10px; */
+}
+div.box2 { /* 表示ボックス */
+width: 98%;    /* windowの98%  950pxが最小*/
+min-width: 950px;
+height: auto;
+position: absolute;
+top: 190px;
+left: 10px; 
+font-size: 9pt;
+}
+
+table.datagrid  {
+   border-collapse: collapse;
+   border-radius: 5px;
+   text-align: center;
+   width: 100%;   /*親BOXの100%*/
+}
+table.datagrid th {
+    background: #77cdffd0;
+}
+table.datagrid tr:nth-child(even) {
+  background: #d9d9d9;
+}
+/*マウスを置いたときの強調表示*/
+table.datagrid tr:hover{
+  /* background-color:grey; */
+  /*font-weight: bold; */
+  color: #0000ff;
+  background-color: #FFFF80;
+  cursor: pointer;
+}
+/*　1行目のhoverを無効にする　*/
+table.datagrid tr:nth-child(1) {
+  pointer-events: none;
+}
+/*  1列目を隠す  */
+table.datagrid th:first-child,table.datagrid td:first-child{
+   display:none;
+}

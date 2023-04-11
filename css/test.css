@@ -1,0 +1,14 @@
+﻿table, th, td {
+    border-collapse: collapse;
+    border: 5px solid rgb(202, 17, 171);
+    line-height: 1.5;
+  }
+
+table th {
+    padding: 50px;/*上下左右10pxずつ*/
+    font-size: 20pt;
+}
+table td {
+    padding: 50px;/*上下左右10pxずつ*/
+    font-size: 20pt;
+}
